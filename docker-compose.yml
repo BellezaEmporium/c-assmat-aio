@@ -1,0 +1,56 @@
+services:
+  # --- Laravel API ---
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: c-assmat-api
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env
+    depends_on:
+      - mongodb
+    volumes:
+      - ./backend:/var/www/html
+    networks:
+      - assmat-net
+
+  # --- MongoDB ---
+  mongodb:
+    image: mongo:7
+    container_name: c-assmat-mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: # Modifier à votre discrétion.
+      MONGO_INITDB_ROOT_PASSWORD: # Modifier à votre discrétion.
+    volumes:
+      - mongo_data:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - assmat-net
+
+  # --- Frontend React/Vite ---
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: c-assmat-front
+    ports:
+      - "5173:5173"
+    env_file:
+      - ./frontend/.env
+    depends_on:
+      - api
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules  # Add this line
+    networks:
+      - assmat-net
+
+networks:
+  assmat-net:
+
+volumes:
+  mongo_data:
