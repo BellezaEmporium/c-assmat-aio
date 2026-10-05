@@ -42,5 +42,5 @@ Lorsque vous vous êtes assuré d'avoir modifié les fichiers correspondants, il
 
 ## Limitations connues du projet
 
-- L'API Pajemploi n'est disponible qu'aux associations/entreprises, donc il est impossible à ce stade de lier votre compte Pajemploi à votre compte.
+- L'API Pajemploi n'est disponible qu'aux associations/entreprises, donc il est impossible à ce stade de lier votre compte Pajemploi à c-assmat.
 - Le projet étant à un stade initial, il est susceptible d'évoluer assez considérablement.
