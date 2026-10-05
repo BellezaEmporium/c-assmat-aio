@@ -45,7 +45,7 @@ services:
       - api
     volumes:
       - ./frontend:/app
-      - /app/node_modules  # Add this line
+      - /app/node_modules
     networks:
       - assmat-net
 
