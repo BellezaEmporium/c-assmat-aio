@@ -4,7 +4,7 @@ Outil pour assister les assistantes maternelles [WIP]
 
 ## Stade du projet
 
-### delta-1
+### delta-1 <- NOUS SOMMES ICI
 
 Base du site/squelette OK, frontend et backend communiquent ensemble proprement (login/accès aux pages).
 
