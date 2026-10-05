@@ -39,3 +39,8 @@ pour installer les différents serveurs sur votre machine. Ils devraient communi
 Vous devez avoir PHP 8, Node 20 minimum ainsi que MongoDB Compass d'installé au sein de votre ordinateur.
 Une fois MongoDB Compass installé, vérifiez le port auquel il communique afin de modifier les fichiers environnements nécessaire (un .env.example est disponible sur le backend)
 Lorsque vous vous êtes assuré d'avoir modifié les fichiers correspondants, il vous suffit d'effectuer les commandes inscrites au sein de chaque partie du site, et vous devriez être bon pour la suite !
+
+## Limitations connues du projet
+
+- L'API Pajemploi n'est disponible qu'aux associations/entreprises, donc il est impossible à ce stade de lier votre compte Pajemploi à votre compte.
+- Le projet étant à un stade initial, il est susceptible d'évoluer assez considérablement.
